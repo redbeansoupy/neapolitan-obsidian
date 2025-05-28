@@ -1,13 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+
+.meow-script-regular {
+	font-family: "Meow Script", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+  
+
 body {
 	--radius-s: 0px;
 	--radius-m: 0px;
 	--radius-l: 0px;
 	--input-radius: 0px;
-	--tab-radius-active: 0px;
+	--tab-radius-active: 0.5em 0.5em 0em 0em;
 	--checkbox-radius: 0px;
 	--toggle-radius: 0px;
 	--toggle-thumb-radius: 0px;
 	--slider-thumb-radius: 0px;
+	--inline-title-font: "Meow Script", cursive;
+	--inline-title-size: 40px;
+	--font-text-theme: Georgia, serif;
+	--list-bullet-size: 0.4em;
+	--indent-unit: 0.4em;
+	--radius-s: 1em;
+	--input-radius: 1em;
+	--status-bar-radius: var(--radius-s);
+	--status-bar-border-width: 1px;
+	--divider-width: 0px;
+}
+
+.theme-dark {
+	--background-primary: #523b2e;
+	--background-secondary: #694632;
+}
+
+.theme-light {
+	--background-primary: #fbf4ec;
+	--background-secondary: #fbe6e4;
+	--titlebar-background-focused: #83695a;
+
+	--text-normal: #522c14;
+	--text-faint: #ceb2a1;
+	--indentation-guide-color: #ebcdcd; 
+	--text-muted: #dc9797;
+	--text-accent: #cb6c6c;
+	--accent-h: 0;
+	--accent-s: 47.7%;
+	--accent-l: 61.0%;
+	--background-modifier-hover: rgba(203, 108, 108, 0.2);
+	--background-modifier-border: #ebcdcd;
+	--background-modifier-border-hover: #dc9797;
+	--background-modifier-message: #ebcdcd;
+	--icon-color-focused: #ebcdcd;
+	--tab-text-color-focused-active: var(--text-normal);
+	--text-highlight-bg-rgb: 255, 220, 100;
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
@@ -31,4 +77,46 @@ svg * {
 
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+.list-bullet {
+	margin: 0px 0.3em 0px 0px;
+}
+
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--icon-color-focused);
+}
+
+.view-header-title {
+	color: var(--text-normal);
+}
+
+/* .workspace-tab-header::before, .workspace-tab-header::after, */
+.workspace-tab-header .is-active ::before, .workspace-tab-header .is-active::after {
+	content: ''; /* <--- This is essential */
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+	position: absolute;
+	bottom: 0;
+
+	z-index: 100;
+
+	background: #ff0000;
+	width: 10px;
+	height: 10px;
+}
+
+.pdf-toolbar,
+.markdown-source-view.mod-cm6 .pdf-embed .edit-block-button,
+thead:first-child {
+	background-color: var(--background-secondary);
+}
+
+img {
+	border-color: #ff0000;
+	border-width: 5px;
+}
+
+thead:first-child:first-child {
+	border-radius: 1em;
 }
