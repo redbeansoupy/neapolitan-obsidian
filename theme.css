@@ -29,10 +29,10 @@ body {
 	--divider-width: 0px;
 }
 
-.theme-dark {
+/* .theme-dark {
 	--background-primary: #523b2e;
 	--background-secondary: #694632;
-}
+} */
 
 .theme-light {
 	--background-primary: #fbf4ec;
